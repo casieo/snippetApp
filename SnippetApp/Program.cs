@@ -11,7 +11,7 @@ namespace SnippetApp
         static void Main(string[] args)
         {
             Helper.AddSource("test");
-            //Helper.ShowSources();
+            Helper.ShowSources();
             //Console.WriteLine("Yay!");
             //Snippet InstantiatedSnippet = new Snippet();
             //Author InstantiatedAuthor = new Author();
