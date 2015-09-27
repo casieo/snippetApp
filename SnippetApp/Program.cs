@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace SnippetApp
 {
@@ -10,8 +11,10 @@ namespace SnippetApp
     {
         static void Main(string[] args)
         {
-            Helper.AddSource("test");
-            Helper.ShowSources();
+            
+            Helper.AddSource("testsourcepleasework");
+            // string sources = Helper.ShowSources();
+            // Console.WriteLine (sources);
             //Console.WriteLine("Yay!");
             //Snippet InstantiatedSnippet = new Snippet();
             //Author InstantiatedAuthor = new Author();
@@ -20,4 +23,9 @@ namespace SnippetApp
             //Comments InstantiatedComments = new Comments();
         }
     }
+
+
+
 }
+    
+

@@ -8,23 +8,20 @@ namespace SnippetApp
 {
     public static class Helper
     {
-        static List<Source> sources = new List<Source>();
+
 
         public static Source AddSource(string SourceName)
         {
-            Source SourceVariable = new Source(SourceName);
-            sources.Add(SourceVariable);
-            return SourceVariable;
-        }
-    
-        public static void ShowSources()
-        {
-            foreach (var source in sources)
+            using (var db = new SnippetAppCodeFirstDB())
             {
-               source.ShowSources = string.Format("New Source Added", source.SourceName); 
-
-                //Console.WriteLine("New Source Added", source.SourceName); 
+                Source source = new Source(SourceName);
+                //source.SourceID = SourceId;
+                //sources.Add(source);
+                db.Sources.Add(source);
+                db.SaveChanges();
+                return source;
             }
+
         }
         public static void AddSourceType(string SourceType)
         { }
@@ -43,5 +40,22 @@ namespace SnippetApp
         { }
         public static void DeleteSnippet(string SnippetText)
         { }
+        #region old code
+        //old list code
+        // static List<Source> sources = new List<Source>();
+
+        //public static string ShowSources()
+        //{
+        //string sourceString = string.Empty;
+
+        // foreach (var source in sources)
+        // {
+        // sourceString = string.Format("New Source Added - {0}", source.SourceName);
+
+        //Console.WriteLine(string.Format("New Source Added - {0}", source.SourceName));
+        // }
+        //return sourceString;
+        //}
+        #endregion
     }
 }

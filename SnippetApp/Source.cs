@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,10 @@ namespace SnippetApp
     {
         #region Properties
         public string SourceName { get; set; }
+        [Key]
         public int SourceID { get; set; }
         public string ShowSources { get; set; }
+
         #endregion Properties
 
         #region Methods
