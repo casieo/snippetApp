@@ -8,7 +8,23 @@ namespace SnippetApp
 {
     public static class Helper
     {
+        public static void CreateKb(string text, string pageOrLocation,  string sourceName, string sourceTypeName, string comment = "Default comment" )
+        {
+            using (var db = new SnippetAppCodeFirstDB())
+            {
+                Snippet sp = new Snippet();
+                sp.Text = text;
 
+                if (comment != "Default comment")
+                {
+
+                }
+
+                db.Snippets.Add(sp);
+
+                db.SaveChanges();
+            }
+        }
 
         public static Source AddSource(string SourceName)
         {

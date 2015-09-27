@@ -5,3 +5,6 @@ C:\Users\casieo\OneDrive\TechnicalProjects\SnippetApp\SnippetApp\bin\Debug\Snipp
 C:\Users\casieo\OneDrive\TechnicalProjects\SnippetApp\SnippetApp\bin\Debug\SnippetApp.pdb
 C:\Users\casieo\OneDrive\TechnicalProjects\SnippetApp\SnippetApp\obj\Debug\SnippetApp.exe
 C:\Users\casieo\OneDrive\TechnicalProjects\SnippetApp\SnippetApp\obj\Debug\SnippetApp.pdb
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\SnippetApp\bin\Debug\SnippetApp.exe.config
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\SnippetApp\obj\Debug\SnippetApp.exe
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\SnippetApp\obj\Debug\SnippetApp.pdb

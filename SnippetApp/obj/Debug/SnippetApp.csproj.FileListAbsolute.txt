@@ -15,3 +15,6 @@ C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetApp\SnippetApp\bin\Debug\E
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetApp\SnippetApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetApp\SnippetApp\bin\Debug\EntityFramework.xml
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetApp\SnippetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\bin\Debug\SnippetApp.exe.config
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\obj\Debug\SnippetApp.exe
+C:\Users\info\Documents\Github\snippetApp\SnippetApp\obj\Debug\SnippetApp.pdb

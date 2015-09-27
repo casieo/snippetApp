@@ -14,9 +14,10 @@ namespace SnippetApp
     {
         #region Properties
         public string SourceName { get; set; }
+
+        public SourceType TypeOfSource { get; set; }
         [Key]
         public int SourceID { get; set; }
-        public string ShowSources { get; set; }
 
         #endregion Properties
 
