@@ -8,55 +8,72 @@ namespace SnippetApp
 {
     public static class Helper
     {
-        public static void CreateKb(string text, string pageOrLocation,  string sourceName, string sourceTypeName, string comment = "Default comment" )
+        public static void CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
-            using (var db = new SnippetAppCodeFirstDB())
+            using (var db = new SnippetAppCodeFirstDB2())
             {
                 Snippet sp = new Snippet();
                 sp.Text = text;
+                sp.PageorLocation = pageOrLocation;
+                db.Snippets.Add(sp);
 
+                Source sourcevar = new Source();
+                sourcevar.SourceName = sourceName;
+                db.Sources.Add(sourcevar);
+
+                Comments commentsvar = new Comments();
+                commentsvar.CommentsText = comment;
                 if (comment != "Default comment")
                 {
 
                 }
+                db.Comments.Add(commentsvar);
 
-                db.Snippets.Add(sp);
+                SourceType sourcetypevar = new SourceType();
+                sourcetypevar.SourceTypeName = sourceTypeName;
+                db.SoureTypes.Add(sourcetypevar);
+
+                Author authorvar = new Author();
+                authorvar.AuthorFirstName = authorFirstName;
+                authorvar.AuthorLastName = authorLastName;
+                db.Authors.Add(authorvar);
 
                 db.SaveChanges();
+                
             }
         }
 
-        public static Source AddSource(string SourceName)
-        {
-            using (var db = new SnippetAppCodeFirstDB())
-            {
-                Source source = new Source(SourceName);
+      //  public static Source AddSource(string SourceName)
+        //{
+          //  using (var db = new SnippetAppCodeFirstDB2())
+            //{
+              //  Source source = new Source(SourceName);
                 //source.SourceID = SourceId;
                 //sources.Add(source);
-                db.Sources.Add(source);
-                db.SaveChanges();
-                return source;
-            }
+                //db.Sources.Add(source);
+                //db.SaveChanges();
+                //return source;
+           // }
 
-        }
-        public static void AddSourceType(string SourceType)
-        { }
-        public static void DeleteSourceType(string SourceType)
-        { }
-        public static void AddComments(string Comments)
-        { }
-        public static void DeleteComments(string Comments)
-        { }
+       // }
+       // public static void AddSourceType(string SourceType)
+        //{ }
+        //public static void DeleteSourceType(string SourceType)
+        //{ }
+        //public static void AddComments(string Comments)
+        //{ }
+        //public static void DeleteComments(string Comments)
+        //{ }
 
-        public static void AddAuthor(string AuthorName)
-        { }
-        public static void DeleteAuthor(string AuthorName)
-        { }
-        public static void AddSnippet(string SnippetText)
-        { }
-        public static void DeleteSnippet(string SnippetText)
-        { }
-        #region old code
+        //public static void AddAuthor(string AuthorName)
+        //{ }
+        //public static void DeleteAuthor(string AuthorName)
+        //{ }
+        //public static void AddSnippet(string SnippetText)
+        //{ }
+        //public static void DeleteSnippet(string SnippetText)
+        //{ }
+        //#region old code
         //old list code
         // static List<Source> sources = new List<Source>();
 
@@ -72,6 +89,6 @@ namespace SnippetApp
         // }
         //return sourceString;
         //}
-        #endregion
+       // #endregion
     }
 }

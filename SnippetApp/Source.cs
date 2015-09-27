@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace SnippetApp
 
         public SourceType TypeOfSource { get; set; }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SourceID { get; set; }
 
         #endregion Properties
@@ -30,6 +32,10 @@ namespace SnippetApp
 
         public Source(string Source)
         { }
+        public Source()
+        {
+
+        }
         #endregion
     }
 

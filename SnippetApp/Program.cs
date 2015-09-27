@@ -11,17 +11,9 @@ namespace SnippetApp
     {
         static void Main(string[] args)
         {
-
-            Helper.CreateKb("This is a sample snippet", "Chp 1 section 1.2", );
-            Helper.AddSource("testsourcepleasework");
-            // string sources = Helper.ShowSources();
-            // Console.WriteLine (sources);
-            //Console.WriteLine("Yay!");
-            //Snippet InstantiatedSnippet = new Snippet();
-            //Author InstantiatedAuthor = new Author();
-            //Source InstantiatedSource = new Source();
-            //SourceType InstantiatedSourceType = new SourceType();
-            //Comments InstantiatedComments = new Comments();
+           // CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
+            Helper.CreateKb("And yet another", "location2", "Book2", "Book", "Brandon", "Schuller" );
+     
         }
     }
 
