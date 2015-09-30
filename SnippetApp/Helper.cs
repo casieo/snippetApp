@@ -10,7 +10,7 @@ namespace SnippetApp
     {
         public static void CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
-            using (var db = new LocalSnippetAppCodeFirstDB2())
+            using (var db = new SnippetAppCodeFirstDBAzure())
             {
                 Snippet sp = new Snippet();
                 sp.Text = text;

@@ -28,3 +28,6 @@ C:\Users\casieo\OneDrive\TechnicalProjects\Git\snippetApp2\SnippetApp\bin\Debug\
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\snippetApp2\SnippetApp\bin\Debug\EntityFramework.xml
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\snippetApp2\SnippetApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\snippetApp2\SnippetApp\obj\Debug\SnippetApp.csprojResolveAssemblyReference.cache
+C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\bin\Debug\SnippetApp.exe.config
+C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.exe
+C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.pdb

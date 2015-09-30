@@ -61,7 +61,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Snippet.cs" />
-    <Compile Include="SnippetAppCodeFirstDB.cs" />
+    <Compile Include="SnippetAppCodeFirstDBAzure.cs" />
     <Compile Include="Source.cs" />
     <Compile Include="SourceType.cs" />
   </ItemGroup>
