@@ -4,7 +4,7 @@ namespace SnippetApp
     using System.Data.Entity;
     using System.Linq;
 
-    public class SnippetAppCodeFirstDB2 : DbContext
+    public class LocalSnippetAppCodeFirstDB2 : DbContext
     {
         // Your context has been configured to use a 'SnippetAppCodeFirstDB' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
@@ -12,8 +12,8 @@ namespace SnippetApp
         // 
         // If you wish to target a different database and/or database provider, modify the 'SnippetAppCodeFirstDB' 
         // connection string in the application configuration file.
-        public SnippetAppCodeFirstDB2()
-            : base("name=SnippetAppCodeFirstDB")
+        public LocalSnippetAppCodeFirstDB2()
+            : base("name=LocalSnippetAppCodeFirstDB2")
         {
         }
 

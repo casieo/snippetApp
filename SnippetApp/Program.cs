@@ -12,7 +12,7 @@ namespace SnippetApp
         static void Main(string[] args)
         {
            // CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
-            Helper.CreateKb("And yet another", "location2", "Book2", "Book", "Brandon", "Schuller" );
+            Helper.CreateKb("Testing again and again and again", "location2", "Book2", "Book", "Ezra", "Owen-Kloor" );
      
         }
     }

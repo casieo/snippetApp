@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
+    <Compile Include="AzureSnippetAppCodeFirstDB.cs" />
     <Compile Include="Comments.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
@@ -65,7 +66,9 @@
     <Compile Include="SourceType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
