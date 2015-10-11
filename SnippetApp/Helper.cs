@@ -8,6 +8,8 @@ namespace SnippetApp
 {
     public static class Helper
     {
+        private static bool a;
+
         public static void CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
             using (var db = new SnippetAppCodeFirstDBAzure())
@@ -39,8 +41,17 @@ namespace SnippetApp
                 db.Authors.Add(authorvar);
 
                 db.SaveChanges();
-                
+
             }
+        }
+        //everything below was added after 10.4 class
+        public static Author[] GetAllAuthors(int AuthorID)
+        {
+            using (var db = new SnippetAppCodeFirstDBAzure())
+            { var authorlist = db.Authors.Where(a => a.AuthorID == AuthorID);
+                return authorlist.ToArray();
+            }
+        }
         }
 
       //  public static Source AddSource(string SourceName)
@@ -91,4 +102,5 @@ namespace SnippetApp
         //}
        // #endregion
     }
-}
+
+

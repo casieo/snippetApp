@@ -8,3 +8,13 @@ C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\bin\Debug
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.xml
 C:\Users\casieo\OneDrive\TechnicalProjects\Git\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\SnippetApp.exe.config
+C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.exe
+C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.pdb
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\SnippetApp.exe
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\SnippetApp.pdb
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.dll
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.xml
+C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetAppAz.csprojResolveAssemblyReference.cache

@@ -10,14 +10,24 @@ namespace SnippetApp
     class Program
     {
         static void Main(string[] args)
-        {
-           // CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
-            Helper.CreateKb("Testing again and again and again", "location", "Book2", "Book", "Ezra", "Owen-Kloor");
-     
+        {//This creates records, is commented out so I can test querying for records
+         // CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
+         //Helper.CreateKb("Testing again and again and again2", "location", "Book2", "Book", "Casie", "Owen");
+            Console.WriteLine("***Wecloem to SnippetApp***");
+            Console.Write("Please enter an author ID:");
+            var authorid = Console.ReadLine();
+            int convertedAuthorID;
+            if (int.TryParse(authorid, out convertedAuthorID) == true)
+            {
+                var authors = Helper.GetAllAuthors(convertedAuthorID);
+                //for (int i = 0; i < accounts.Length; i++)
+                {
+                    Console.WriteLine("Name:{0}", convertedAuthorID);
+                }
+            }
         }
+
     }
-
-
 
 }
     
