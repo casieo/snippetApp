@@ -45,10 +45,10 @@ namespace SnippetApp
             }
         }
         //everything below was added after 10.4 class
-        public static Author[] GetAllAuthors(int AuthorID)
+        public static Author[] GetAllAuthors(int authorID)
         {
             using (var db = new SnippetAppCodeFirstDBAzure())
-            { var authorlist = db.Authors.Where(a => a.AuthorID == AuthorID);
+            { var authorlist = db.Authors.Where(a => a.AuthorID == authorID);
                 return authorlist.ToArray();
             }
         }
