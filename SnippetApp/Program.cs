@@ -16,13 +16,19 @@ namespace SnippetApp
             bool success = false;
             short attempts = 1;
             Console.WriteLine("***Welcome to SnippetApp***");
-            while (!success && attempts++ < 4)
+            Console.WriteLine("Type 0 to exit");
+            while (!success && attempts++ < 4) ;
+            while (true)
             {
                 Console.Write("Please enter an author ID:");
                 var authorid = Console.ReadLine();
                 int convertedAuthorid;
                 if (int.TryParse(authorid, out convertedAuthorid) == true)
                 {
+                    if (convertedAuthorid == 0)
+                        break;
+                    else if (convertedAuthorid < 0)//need to figure out why the or for convertedAuthorid > Helper.GetAllAuthors.Length or authors.Length isn't working
+                        continue;
                     var authors = Helper.GetAllAuthors(convertedAuthorid);
                     for (int i = 0; i < authors.Length; i++)
                     {
@@ -38,20 +44,28 @@ namespace SnippetApp
                     if (success)
                     {
                         //Let's ask the user for the account to pull up the details
-                        Console.Write("Please select an Author: ");
-                        var accountIndex = Console.ReadLine();
-                        int convertedAccountIndex;
-                        if (int.TryParse(accountIndex, out convertedAccountIndex) == true)
+                        //Console.WriteLine("Type 0 to exit");
+        
+                        Console.WriteLine("Type 0 to exit");                      
                         {
-                            var author = authors[convertedAccountIndex - 1];
-                            Console.WriteLine("Author Last Name: {0}, Author First Name: {1}, AuthorID: {2}",
-                                author.AuthorLastName, author.AuthorFirstName, author.AuthorID);
-                            Console.ReadLine();
+                           Console.Write("Please select an Author: ");
+                            int convertedAccountIndex;
+                            var accountIndex = Console.ReadLine();
+                            if (int.TryParse(accountIndex, out convertedAccountIndex) == true)
+                            {
+                                if (convertedAccountIndex == 0)
+                                    break; //break out of the inner most loop you're in
+                                else if (convertedAccountIndex < 0)//need to figure out why the or for convertedAuthorid > Helper.GetAllAuthors.Length or authors.Length isn't working
+                                    continue;
+                                var author = authors[convertedAccountIndex - 1];
+                                Console.WriteLine("Author Last Name: {0}, Author First Name: {1}, AuthorID: {2}",
+                                    author.AuthorLastName, author.AuthorFirstName, author.AuthorID);
+                            }
                         }
                     }
                 }
-            }
 
+            }
         }
     }
 }
