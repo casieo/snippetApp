@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetAppAz", "SnippetApp\SnippetAppAz.csproj", "{283253A5-2978-4708-A3CB-BA63373A6462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetAppUI", "SnippetAppUI\SnippetAppUI.csproj", "{C84FC391-7968-432A-8053-7CEAE4A42110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetAppUI.Tests", "SnippetAppUI.Tests\SnippetAppUI.Tests.csproj", "{80BDE103-BEAB-4F65-84AF-06E29061CCE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{283253A5-2978-4708-A3CB-BA63373A6462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{283253A5-2978-4708-A3CB-BA63373A6462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{283253A5-2978-4708-A3CB-BA63373A6462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84FC391-7968-432A-8053-7CEAE4A42110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84FC391-7968-432A-8053-7CEAE4A42110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84FC391-7968-432A-8053-7CEAE4A42110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84FC391-7968-432A-8053-7CEAE4A42110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BDE103-BEAB-4F65-84AF-06E29061CCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BDE103-BEAB-4F65-84AF-06E29061CCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BDE103-BEAB-4F65-84AF-06E29061CCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BDE103-BEAB-4F65-84AF-06E29061CCE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

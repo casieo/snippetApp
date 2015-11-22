@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using(Html.BeginForm("GetAuthors", "Home"))
+{
+
+<div class="jumbotron">
+    <h1>Snippets!</h1>
+    <p class="lead">Snippet App!</p>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Got a snippet?</h2>
+        <p>
+            Enter an author ID:@Html.TextBox("txtAuthorID")
+        </p>
+        <p><input id="btnGetAuthors" type="submit" value="GetAuthors" /></p>
+    </div>
+
+</div>
+}
