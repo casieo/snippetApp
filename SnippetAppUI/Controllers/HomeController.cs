@@ -14,17 +14,29 @@ namespace SnippetAppUI.Controllers
             return View();
         }
 
-        public ActionResult GetAuthors(FormCollection collection)
+        public ActionResult GetSnippet(FormCollection collection)
         {
-            var authorid = collection["TxtAuthorID"];
-            int convertedAuthorID;
-            if (int.TryParse(authorid, out convertedAuthorID))
+
+            var query = collection["Txtquery"];
+          
             {
-                var authors = Helper.GetAllAuthors(convertedAuthorID);
-                return View(authors);
+                var snippets = Helper.SearchForSnippets(query);
+                return View(snippets);
             }
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
             return View();
         }
+        
+        [HttpPost]
+       // public ActionResult Create(Snippet snippet)
+       //{
+       //     var newSnippet = Helper.CreateKb(snippet.Text, snippet.PageorLocation, snippet.sourceName, snippet.sourceTypeName, snippet.authorFirstName, snippet.authorLastName, snippet.comment);
+       //     return View(snippet);
+       // }
+        //public ActionResult Detail(int )
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

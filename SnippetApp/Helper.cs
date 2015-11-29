@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace SnippetApp
 {
-    public static class Helper
+    public  class Helper
     {
         private static bool a;
+
+        public static  IQueryable<Snippet> SearchForSnippets(string query)
+        {
+            using (var db = new SnippetAppCodeFirstDBAzure())
+            {
+                var q = db.Snippets.AsQueryable();
+                string qs = query;
+                {
+                    q = q.Where(x => x.Text.Contains(qs));
+                }
+                return q;
+            }
+        }
 
         public static void CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
@@ -52,7 +65,18 @@ namespace SnippetApp
                 return authorlist.ToArray();
             }
         }
-        }
+
+        //public static Snippet[] GetAllSnippets(string keyword)
+        //{
+        //    using (var db = new SnippetAppCodeFirstDBAzure())
+        //    {
+        //        var snippetlist = db.Snippets.Where(a => a.Text. );
+        //        return snippetlist.ToArray();
+        //    }
+        //}
+    }
+
+
 
       //  public static Source AddSource(string SourceName)
         //{

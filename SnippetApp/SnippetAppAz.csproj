@@ -60,6 +60,7 @@
     <Compile Include="Author.cs" />
     <Compile Include="AzureSnippetAppCodeFirstDB.cs" />
     <Compile Include="Comments.cs" />
+    <Compile Include="GetSnippets.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

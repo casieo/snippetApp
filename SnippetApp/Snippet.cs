@@ -14,11 +14,34 @@ namespace SnippetApp
     {
         #region Properties
         public string Text { get; set; }
-   
+
         public string PageorLocation { get; set; }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TextID { get; set; }
+
+        public class GetSnippets
+        {
+            public IQueryable<Snippet> SearchForSnippets(string query)
+            {
+                using (var db = new SnippetAppCodeFirstDBAzure())
+                {
+                    var q = db.Snippets.AsQueryable();
+                    string qs = query;
+                    {
+                        q = q.Where(x => x.Text.Contains(qs));
+                    }
+                    return (q);
+                }
+            }
+        }
+
+        //public string sourceName { get; set; }
+        //public string sourceTypeName { get; set; }
+        //public string authorFirstName { get; set; }
+        //public string authorLastName { get; set; }
+        //public string comment { get; set; }
+
         #endregion
 
         #region Methods

@@ -198,6 +198,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511290502132_UpdateDB.cs" />
+    <Compile Include="Migrations\201511290502132_UpdateDB.Designer.cs">
+      <DependentUpon>201511290502132_UpdateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511290506036_UpdateDB1.cs" />
+    <Compile Include="Migrations\201511290506036_UpdateDB1.Designer.cs">
+      <DependentUpon>201511290506036_UpdateDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511290517373_2.cs" />
+    <Compile Include="Migrations\201511290517373_2.Designer.cs">
+      <DependentUpon>201511290517373_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511290523023_UpdateDB2.cs" />
+    <Compile Include="Migrations\201511290523023_UpdateDB2.Designer.cs">
+      <DependentUpon>201511290523023_UpdateDB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -226,7 +243,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -261,7 +280,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
-    <Content Include="Views\Home\GetAuthors.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\GetSnippet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +302,20 @@
       <Project>{283253a5-2978-4708-a3cb-ba63373a6462}</Project>
       <Name>SnippetAppAz</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511290502132_UpdateDB.resx">
+      <DependentUpon>201511290502132_UpdateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511290506036_UpdateDB1.resx">
+      <DependentUpon>201511290506036_UpdateDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511290517373_2.resx">
+      <DependentUpon>201511290517373_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511290523023_UpdateDB2.resx">
+      <DependentUpon>201511290523023_UpdateDB2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
