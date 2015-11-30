@@ -20,21 +20,21 @@ namespace SnippetApp
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TextID { get; set; }
 
-        public class GetSnippets
-        {
-            public IQueryable<Snippet> SearchForSnippets(string query)
-            {
-                using (var db = new SnippetAppCodeFirstDBAzure())
-                {
-                    var q = db.Snippets.AsQueryable();
-                    string qs = query;
-                    {
-                        q = q.Where(x => x.Text.Contains(qs));
-                    }
-                    return (q);
-                }
-            }
-        }
+        //public class GetSnippets
+        //{
+        //    public IQueryable<Snippet> SearchForSnippets(string query)
+        //    {
+        //        using (var context = new SnippetAppCodeFirstDBAzure())
+        //        {
+        //            var q = context.Snippets.AsQueryable();
+        //            string qs = query;
+        //            {
+        //                q = q.Where(x => x.Text.Contains(qs));
+        //            }
+        //            return (q);
+        //        }
+        //    }
+        //}
 
         //public string sourceName { get; set; }
         //public string sourceTypeName { get; set; }

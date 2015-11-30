@@ -31,12 +31,20 @@ namespace SnippetAppUI.Controllers
         }
         
         [HttpPost]
-       // public ActionResult Create(Snippet snippet)
-       //{
-       //     var newSnippet = Helper.CreateKb(snippet.Text, snippet.PageorLocation, snippet.sourceName, snippet.sourceTypeName, snippet.authorFirstName, snippet.authorLastName, snippet.comment);
-       //     return View(snippet);
-       // }
-        //public ActionResult Detail(int )
+        public ActionResult Create(Snippet snippet)
+        {
+            var newSnippet = Helper.CreateKb(snippet.Text, snippet.PageorLocation);
+            if (newSnippet != null)
+            {
+                return RedirectToAction("Detail",new {id = newSnippet.TextID});
+            }
+            return View();
+        }
+        public ActionResult Detail(int id)
+        {
+            var snippet = Helper.GetSnippetByID(id);
+            return View(snippet);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

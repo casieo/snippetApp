@@ -12,7 +12,7 @@ namespace SnippetApp
         static void Main(string[] args)
         {//This creates records, is commented out so I can test querying for records
          // CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
-            Helper.CreateKb("11.21.2015 - Testing again and again and again and yet again", "location", "Book2", "Book", "Brandon", "Schuller");
+            Helper.CreateKb("11.21.2015 - Testing again and again and again and yet again", "location");
             bool success = false;
             short attempts = 1;
             Console.WriteLine("***Welcome to SnippetApp***");

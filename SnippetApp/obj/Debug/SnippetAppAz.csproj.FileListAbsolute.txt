@@ -15,6 +15,6 @@ C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.dll
 C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.xml
 C:\Local\SnippetAppAz\SnippetApp\bin\Debug\EntityFramework.SqlServer.xml
-C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetAppAz.csprojResolveAssemblyReference.cache
 C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.dll
 C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetApp.pdb
+C:\Local\SnippetAppAz\SnippetApp\obj\Debug\SnippetAppAz.csprojResolveAssemblyReference.cache

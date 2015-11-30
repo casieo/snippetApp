@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +12,21 @@ namespace SnippetApp
     {
         private static bool a;
 
-        public static  IQueryable<Snippet> SearchForSnippets(string query)
+        public static List<Snippet> SearchForSnippets(string query)
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var context = new SnippetAppCodeFirstDBAzure())
             {
-                var q = db.Snippets.AsQueryable();
+                var q = context.Snippets.AsQueryable();
                 string qs = query;
                 {
                     q = q.Where(x => x.Text.Contains(qs));
                 }
-                return q;
+                var result = context.Snippets.ToList();
+                return result;
             }
         }
 
-        public static void CreateKb(string text, string pageOrLocation, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
+        public static Snippet CreateKb(string text, string pageOrLocation)//, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
             using (var db = new SnippetAppCodeFirstDBAzure())
             {
@@ -32,28 +35,29 @@ namespace SnippetApp
                 sp.PageorLocation = pageOrLocation;
                 db.Snippets.Add(sp);
 
-                Source sourcevar = new Source();
-                sourcevar.SourceName = sourceName;
-                db.Sources.Add(sourcevar);
+                //Source sourcevar = new Source();
+                //sourcevar.SourceName = sourceName;
+                //db.Sources.Add(sourcevar);
 
-                Comments commentsvar = new Comments();
-                commentsvar.CommentsText = comment;
-                if (comment != "Default comment")
-                {
+                //Comments commentsvar = new Comments();
+                //commentsvar.CommentsText = comment;
+                //if (comment != "Default comment")
+                //{
 
-                }
-                db.Comments.Add(commentsvar);
+                //}
+                //db.Comments.Add(commentsvar);
 
-                SourceType sourcetypevar = new SourceType();
-                sourcetypevar.SourceTypeName = sourceTypeName;
-                db.SoureTypes.Add(sourcetypevar);
+                //SourceType sourcetypevar = new SourceType();
+                //sourcetypevar.SourceTypeName = sourceTypeName;
+                //db.SoureTypes.Add(sourcetypevar);
 
-                Author authorvar = new Author();
-                authorvar.AuthorFirstName = authorFirstName;
-                authorvar.AuthorLastName = authorLastName;
-                db.Authors.Add(authorvar);
+                //Author authorvar = new Author();
+                //authorvar.AuthorFirstName = authorFirstName;
+                //authorvar.AuthorLastName = authorLastName;
+                //db.Authors.Add(authorvar);
 
                 db.SaveChanges();
+                return sp;
 
             }
         }
@@ -66,6 +70,15 @@ namespace SnippetApp
             }
         }
 
+        public static Snippet GetSnippetByID(int TextID)
+        {
+            using (var db = new SnippetAppCodeFirstDBAzure())
+            {
+                var snippetlist = db.Snippets.Where(a => a.TextID == TextID).FirstOrDefault();
+                return snippetlist;
+            }
+
+        }
         //public static Snippet[] GetAllSnippets(string keyword)
         //{
         //    using (var db = new SnippetAppCodeFirstDBAzure())
