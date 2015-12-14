@@ -40,6 +40,23 @@ namespace SnippetAppUI.Controllers
             }
             return View();
         }
+
+   
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {            
+                var snippet = Helper.GetSnippetByID(id);
+                return View(snippet);            
+        }
+
+        [HttpPost]
+        public ActionResult PostEdit(Snippet snippet)
+        {
+            var newSnippet = Helper.EditKb(snippet.Text, snippet.PageorLocation);
+            return View();
+       }
+
+
         public ActionResult Detail(int id)
         {
             var snippet = Helper.GetSnippetByID(id);

@@ -61,6 +61,19 @@ namespace SnippetApp
 
             }
         }
+            public static Snippet EditKb(string text, string pageOrLocation)//, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
+        {
+            using (var db = new SnippetAppCodeFirstDBAzure())
+            {
+                Snippet sp = new Snippet();
+                sp.Text = text;
+                sp.PageorLocation = pageOrLocation;
+                db.Snippets.Add(sp);
+                db.SaveChanges();
+                return sp;
+
+            }
+        }
         //everything below was added after 10.4 class
         public static Author[] GetAllAuthors(int authorID)
         {
