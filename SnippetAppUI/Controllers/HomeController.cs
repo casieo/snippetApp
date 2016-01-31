@@ -50,11 +50,33 @@ namespace SnippetAppUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult PostEdit(Snippet snippet)
+        public ActionResult Edit(Snippet snippet)
         {
             var newSnippet = Helper.EditKb(snippet.Text, snippet.PageorLocation);
+            if (newSnippet != null)
+            {
+                return RedirectToAction("Detail", new { id = newSnippet.TextID });
+            }
             return View();
        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var snippet = Helper.GetSnippetByID(id);
+            return View(snippet);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Snippet snippet)
+        {
+            var newSnippet = Helper.DeleteKb(snippet.Text, snippet.PageorLocation);
+            if (newSnippet != null)
+            {
+                return RedirectToAction("Detail", new { id = newSnippet.TextID });
+            }
+            return View();
+        }
 
 
         public ActionResult Detail(int id)
