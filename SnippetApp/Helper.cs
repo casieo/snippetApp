@@ -14,7 +14,7 @@ namespace SnippetApp
 
         public static List<Snippet> SearchForSnippets(string query)
         {
-            using (var context = new SnippetAppCodeFirstDBAzure())
+            using (var context = new SnippetAppDB())
             {
                 var q = context.Snippets.AsQueryable();
                 string qs = query;
@@ -28,7 +28,7 @@ namespace SnippetApp
 
         public static Snippet CreateKb(string text, string pageOrLocation)//, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var db = new SnippetAppDB())
             {
                 Snippet sp = new Snippet();
                 sp.Text = text;
@@ -63,7 +63,7 @@ namespace SnippetApp
         }
             public static Snippet EditKb(string text, string pageOrLocation)//, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var db = new SnippetAppDB())
             {
                 Snippet sp = new Snippet();
                 sp.Text = text;
@@ -77,7 +77,7 @@ namespace SnippetApp
 
         public static Snippet DeleteKb(string text, string pageOrLocation)//, string sourceName, string sourceTypeName, string authorFirstName, string authorLastName, string comment = "Default comment")
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var db = new SnippetAppDB())
             {
                 Snippet sp = new Snippet();
                 sp.Text = text;
@@ -91,7 +91,7 @@ namespace SnippetApp
         //everything below was added after 10.4 class
         public static Author[] GetAllAuthors(int authorID)
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var db = new SnippetAppDB())
             { var authorlist = db.Authors.Where(a => a.AuthorID == authorID);
                 return authorlist.ToArray();
             }
@@ -99,7 +99,7 @@ namespace SnippetApp
 
         public static Snippet GetSnippetByID(int TextID)
         {
-            using (var db = new SnippetAppCodeFirstDBAzure())
+            using (var db = new SnippetAppDB())
             {
                 var snippetlist = db.Snippets.Where(a => a.TextID == TextID).FirstOrDefault();
                 return snippetlist;
