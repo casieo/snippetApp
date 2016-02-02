@@ -11,7 +11,7 @@ namespace SnippetApp
     //{
     //    public IQueryable<Snippet> SearchForSnippets(string query)
     //    {
-    //        using (var db = new SnippetAppCodeFirstDBAzure())
+    //        using (var db = new SnippetAppDB())
     //        {
     //            var q = db.Snippets.AsQueryable();
     //            string qs = query;
