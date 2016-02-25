@@ -20,9 +20,11 @@ namespace SnippetApp
                 string qs = query;
                 {
                     q = q.Where(x => x.Text.Contains(qs));
+                    
                 }
-                var result = context.Snippets.ToList();
+                var result = q.ToList();              
                 return result;
+              
             }
         }
 
